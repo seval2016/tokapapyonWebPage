@@ -1,0 +1,27 @@
+/* Hero section styles */
+
+.hero-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../assets/images/hero/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-eyebrow {
+  letter-spacing: 0.12em;
+}
+
+.hero-title {
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  max-width: 34rem;
+}
+
+.hero-placeholder {
+  width: 100%;
+}
+

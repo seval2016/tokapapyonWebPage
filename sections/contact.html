@@ -1,0 +1,47 @@
+<section id="contact" class="contact-section py-5 bg-light">
+  <div class="container">
+    <header class="text-center mb-5">
+      <h2 class="h1 fw-bold mb-3">İletişim</h2>
+      <p class="text-muted mb-0">
+        Ziyaretçiler burada form veya WhatsApp üzerinden hızlıca iletişime geçebilecek.
+      </p>
+    </header>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Ad Soyad</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-posta</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mesajınız</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Gönder
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <aside class="contact-aside h-100 d-flex flex-column justify-content-between">
+          <div class="mb-3">
+            <h3 class="h5 mb-2">Diğer İletişim Kanalları</h3>
+            <p class="text-muted mb-0">
+              Buraya e-posta adresi, sosyal medya linkleri veya adres bilgisi eklenebilir.
+            </p>
+          </div>
+          <div>
+            <button class="btn btn-success d-inline-flex align-items-center gap-2" id="whatsappButton" type="button">
+              <span>WhatsApp ile Yaz</span>
+            </button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+

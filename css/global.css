@@ -1,0 +1,45 @@
+/* Global layout, typography and utilities */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #212529;
+  background-color: #ffffff;
+}
+
+main {
+  display: block;
+}
+
+.hero-section,
+.collection-section,
+.about-section,
+.previous-section,
+.why-section,
+.contact-section,
+.footer-section {
+  scroll-margin-top: 80px; /* Offset for fixed / sticky navbars */
+}
+
+.hero-placeholder,
+.about-placeholder {
+  min-height: 260px;
+  padding: 1.5rem;
+  background: radial-gradient(circle at top left, #f8f9fa, #ffffff);
+}
+
+/* Basic animation utilities (used by animations.js) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

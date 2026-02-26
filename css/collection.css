@@ -1,0 +1,16 @@
+/* Collection section styles */
+
+.collection-section {
+  background-color: #ffffff;
+}
+
+.collection-card {
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+.collection-card:hover,
+.collection-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+}
+

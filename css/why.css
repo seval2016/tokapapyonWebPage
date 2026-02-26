@@ -1,0 +1,12 @@
+/* Why section styles */
+
+.why-section {
+  background-color: #ffffff;
+}
+
+.why-item {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #f8f9fa;
+}
+

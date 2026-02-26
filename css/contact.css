@@ -1,0 +1,14 @@
+/* Contact section styles */
+
+.contact-section {
+  background-color: #f8f9fa;
+}
+
+.contact-form .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.contact-aside {
+  padding: 1.5rem;
+}
+
