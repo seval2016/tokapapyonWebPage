@@ -13,6 +13,7 @@ function initNavbar() {
 
   enableNavbarScrollHighlight(navLinks);
   enableNavbarCollapseOnClick(navLinks);
+  enableNavbarShrinkOnScroll(navbar);
 }
 
 function enableNavbarScrollHighlight(links) {
@@ -61,4 +62,18 @@ function enableNavbarCollapseOnClick(links) {
     });
   });
 }
+
+function enableNavbarShrinkOnScroll(navbar) {
+  const shrinkOffset = 24;
+
+  const onScroll = () => {
+    const shouldShrink = window.scrollY > shrinkOffset;
+    navbar.classList.toggle("navbar-shrink", shouldShrink);
+    navbar.classList.toggle("navbar-scrolled", shouldShrink);
+  };
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+}
+
 

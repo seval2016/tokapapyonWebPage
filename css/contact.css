@@ -1,14 +1,82 @@
-/* Contact section styles */
+/* ===================================
+   Contact Section - Conversion Focus
+=================================== */
 
 .contact-section {
-  background-color: #f8f9fa;
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: linear-gradient(
+    to bottom,
+    #f8f9fa 0%,
+    #ffffff 100%
+  );
+}
+
+/* Üst accent çizgi */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #198754; /* WhatsApp green */
+  border-radius: 2px;
+}
+
+/* Form card */
+.contact-form {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.06);
+}
+
+/* Form inputs */
+.contact-form .form-control {
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-form .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
 }
 
+/* Submit button */
+.contact-form .btn {
+  border-radius: 2rem;
+  padding: 0.6rem 1.75rem;
+}
+
+/* Aside box */
 .contact-aside {
-  padding: 1.5rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.06);
 }
 
+/* WhatsApp button */
+#whatsappButton {
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#whatsappButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 2rem rgba(25, 135, 84, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}

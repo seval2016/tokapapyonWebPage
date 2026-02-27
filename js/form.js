@@ -2,20 +2,32 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
-  if (!form) return;
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+      if (!form.checkValidity()) {
+        form.classList.add("was-validated");
+        return;
+      }
 
-    if (!form.checkValidity()) {
-      form.classList.add("was-validated");
-      return;
-    }
+      // In production, replace this with real submit (AJAX or external service)
+      // For now, just reset the form.
+      form.reset();
+      form.classList.remove("was-validated");
+    });
+  }
 
-    // In production, replace this with real submit (AJAX or external service)
-    // For now, just reset the form.
-    form.reset();
-    form.classList.remove("was-validated");
-  });
+  const offerCta = document.getElementById("navbarOfferCta");
+  const nameInput = document.getElementById("name");
+
+  if (offerCta && form && nameInput) {
+    offerCta.addEventListener("click", (event) => {
+      // Allow smooth scroll to #contact via href
+      setTimeout(() => {
+        nameInput.focus();
+      }, 400);
+    });
+  }
 });
 

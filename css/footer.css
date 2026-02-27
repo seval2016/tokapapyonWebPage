@@ -1,6 +1,47 @@
-/* Footer section styles */
+/* ===================================
+   Footer Section - Minimal Premium
+=================================== */
 
 .footer-section {
-  background-color: #ffffff;
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background: #ffffff;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  font-size: 0.9rem;
 }
 
+/* Hafif üst gradient geçiş */
+.footer-section::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 249, 250, 1),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+/* Link */
+.footer-section a {
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: #dc3545; /* marka kırmızı */
+}
+
+/* Başa dön animasyon */
+.footer-section a[href="#hero"] {
+  position: relative;
+}
+
+.footer-section a[href="#hero"]::after {
+  content: " ↑";
+  font-size: 0.85rem;
+}

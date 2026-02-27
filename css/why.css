@@ -1,12 +1,63 @@
-/* Why section styles */
+/* ===================================
+   Why Section - Feature Grid
+=================================== */
 
 .why-section {
-  background-color: #ffffff;
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: #ffffff;
 }
 
+/* Üst ince accent çizgi */
+.why-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #dc3545; /* marka kırmızı */
+  border-radius: 2px;
+}
+
+/* Why item kart görünümü */
 .why-item {
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  background: #f8f9fa;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+  height: 100%;
 }
 
+/* Hover efekti */
+.why-item:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
+}
+
+/* Başlık */
+.why-item h3 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Metin */
+.why-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}

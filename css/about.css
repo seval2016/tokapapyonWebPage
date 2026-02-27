@@ -1,10 +1,64 @@
-/* About section styles */
+/* ===================================
+   About Section - Premium Parallax
+=================================== */
 
 .about-section {
-  background-color: #ffffff;
+  position: relative;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  color: #ffffff;
+  background-image: url("../assets/images/about/about-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  z-index: 0;
+}
+
+/* Content above overlay */
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Typography */
+.about-section h2 {
+  letter-spacing: -0.02em;
+}
+
+.about-section p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Media card */
+.about-media {
+  position: relative;
 }
 
 .about-placeholder {
   width: 100%;
+  min-height: 260px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

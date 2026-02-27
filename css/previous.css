@@ -1,16 +1,68 @@
-/* Previous work section styles */
+/* ===================================
+   Previous Section - Showcase Style
+=================================== */
 
 .previous-section {
-  background-color: #f8f9fa;
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: #f8f9fa;
+  overflow: hidden;
 }
 
+/* Section üst ince çizgi */
+.previous-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: #0d6efd; /* Bootstrap primary */
+  border-radius: 2px;
+}
+
+/* Kart */
 .previous-card {
-  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+  border: none;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.06);
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  overflow: hidden;
+  height: 100%;
 }
 
-.previous-card:hover,
-.previous-card:focus-within {
-  transform: translateY(-4px);
-  box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.12);
+/* Hover */
+.previous-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.12);
 }
 
+/* Card body */
+.previous-card .card-body {
+  padding: 2rem;
+}
+
+/* Başlık */
+.previous-card .card-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Açıklama */
+.previous-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .previous-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
