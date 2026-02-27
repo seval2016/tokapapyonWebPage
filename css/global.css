@@ -1,5 +1,10 @@
 /* Global layout, typography and utilities */
 
+:root {
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +26,7 @@ main {
 .why-section,
 .contact-section,
 .footer-section {
-  scroll-margin-top: 80px; /* Offset for fixed / sticky navbars */
+  scroll-margin-top: 80px;
 }
 
 .hero-placeholder,
@@ -31,7 +36,7 @@ main {
   background: radial-gradient(circle at top left, #f8f9fa, #ffffff);
 }
 
-/* Basic animation utilities (used by animations.js) */
+/* Basic animation utilities */
 .fade-in {
   opacity: 0;
   transform: translateY(12px);
@@ -43,3 +48,24 @@ main {
   transform: translateY(0);
 }
 
+/* ===============================
+   MODERN BUTTON SYSTEM
+================================ */
+
+.btn,
+.premium-button {
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Hover modern effect */
+.btn:hover,
+.premium-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Form inputs consistency */
+.form-control {
+  border-radius: var(--radius-md);
+}

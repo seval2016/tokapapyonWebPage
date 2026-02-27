@@ -1,64 +1,72 @@
-/* ===================================
-   About Section - Premium Parallax
-=================================== */
+/* ===============================
+   ABOUT - MODERN CLEAN VERSION
+================================ */
 
 .about-section {
-  position: relative;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-  color: #ffffff;
-  background-image: url("../assets/images/about/about-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  padding: 7rem 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #f8f9fa 100%
+  );
 }
 
-/* Dark overlay */
-.about-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.65);
-  z-index: 0;
+/* İçerik */
+.about-content {
+  max-width: 520px;
 }
 
-/* Content above overlay */
-.about-section .container {
-  position: relative;
-  z-index: 2;
+.about-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #dc2626;
+  margin-bottom: 1rem;
 }
 
-/* Typography */
-.about-section h2 {
-  letter-spacing: -0.02em;
+.about-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  color: #1f2937;
 }
 
-.about-section p {
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
+.about-text {
   font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
 }
 
-/* Media card */
-.about-media {
-  position: relative;
+/* Görsel Kart */
+.about-visual-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+  background: #ffffff;
 }
 
-.about-placeholder {
+.about-image {
   width: 100%;
-  min-height: 260px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  height: 350px;
+  object-fit: cover;
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .about-image {
+    height: 320px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
   }
 }

@@ -1,6 +1,6 @@
 [
   {
-    "image": "assets/images/hero/slider-1.jpg",
+    "image": "assets/images/hero/slider-1.png",
     "eyebrow": "TOKAPAPYON TOPTAN ÜRETİM",
     "title": "23 Nisan’a Özel Okullara Toptan Papyon & Toka",
     "subtitle": "Kurumsal kimliğinize uygun toplu üretim çözümleri.",
@@ -8,7 +8,7 @@
     "primaryButtonLink": "#contact"
   },
   {
-    "image": "assets/images/hero/slider-2.jpg",
+    "image": "assets/images/hero/slider-2.png",
     "eyebrow": "ZAMANINDA TESLİMAT",
     "title": "Hızlı Üretim ve Güvenli Sevkiyat",
     "subtitle": "Yüksek adetli siparişlerde planlı üretim.",
@@ -16,7 +16,7 @@
     "primaryButtonLink": "#contact"
   },
   {
-    "image": "assets/images/hero/slider-3.jpg",
+    "image": "assets/images/hero/slider-3.png",
     "eyebrow": "KURUMSAL TASARIM",
     "title": "Okulunuza Özel Tasarım Seçenekleri",
     "subtitle": "Renk, logo ve konsept uyumlu üretim.",

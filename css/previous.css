@@ -1,68 +1,111 @@
-/* ===================================
-   Previous Section - Showcase Style
-=================================== */
+/* ===============================
+   PREVIOUS - MODERN COLLAGE
+================================ */
 
 .previous-section {
-  position: relative;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background: #f8f9fa;
-  overflow: hidden;
-}
-
-/* Section üst ince çizgi */
-.previous-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 3px;
-  background: #0d6efd; /* Bootstrap primary */
-  border-radius: 2px;
-}
-
-/* Kart */
-.previous-card {
-  border: none;
-  border-radius: 1.25rem;
+  padding: 7rem 0;
   background: #ffffff;
-  box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.06);
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #6b7280;
+}
+
+/* GRID */
+.previous-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 1.5rem;
+}
+
+/* ITEM */
+.previous-item {
+  position: relative;
   overflow: hidden;
-  height: 100%;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
 }
 
-/* Hover */
-.previous-card:hover {
+.previous-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.12);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.1);
 }
 
-/* Card body */
-.previous-card .card-body {
-  padding: 2rem;
+.previous-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
 }
 
-/* Başlık */
-.previous-card .card-title {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+.previous-item:hover img {
+  transform: scale(1.08);
 }
 
-/* Açıklama */
-.previous-card .card-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
+/* Büyük varyasyonlar */
+.previous-item.large {
+  grid-row: span 2;
+}
+
+.previous-item.wide {
+  grid-column: span 2;
+}
+
+/* Badge */
+.previous-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+/*previous lightbox"*/
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-content img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 12px;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .previous-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+@media (max-width: 992px) {
+  .previous-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .previous-item.large {
+    grid-row: span 1;
+  }
+
+  .previous-item.wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .previous-grid {
+    grid-template-columns: 1fr;
   }
 }
