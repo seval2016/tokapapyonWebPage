@@ -1,9 +1,46 @@
-/* Global layout, typography and utilities */
+/* ===================================
+   TOKAPAPYON DESIGN SYSTEM
+   Global Layout + Theme Tokens
+=================================== */
 
 :root {
+
+  /* ========= BRAND COLORS ========= */
+  --color-primary: #1C365D;      /* Navy */
+  --color-accent: #dc3545;       /* Kırmızı */
+  --color-soft-bg: #f8f6f3;      /* Pastel zemin */
+  --color-dark: #212529;
+  --color-muted: #6c757d;
+
+  /* ========= TEXT ========= */
+  --heading-color: var(--color-primary);
+  --body-color: #4a4a4a;
+
+  /* ========= FONT SCALE ========= */
+  --fs-display: clamp(2.4rem, 3vw, 3rem);
+  --fs-h1: 2.1rem;
+  --fs-h2: 1.7rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.9rem;
+
+  /* ========= BORDER RADIUS ========= */
+  --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 16px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  /* ========= SHADOWS ========= */
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.05);
+  --shadow-medium: 0 15px 45px rgba(0,0,0,0.08);
+
+  /* ========= SPACING ========= */
+  --section-padding: 6rem;
 }
+
+/* ===================================
+   BASE RESET
+=================================== */
 
 html {
   scroll-behavior: smooth;
@@ -11,14 +48,16 @@ html {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #212529;
+  color: var(--body-color);
   background-color: #ffffff;
+  line-height: 1.6;
 }
 
 main {
   display: block;
 }
 
+/* Navbar offset */
 .hero,
 .collection-section,
 .about-section,
@@ -29,14 +68,43 @@ main {
   scroll-margin-top: 80px;
 }
 
-.hero-placeholder,
-.about-placeholder {
-  min-height: 260px;
-  padding: 1.5rem;
-  background: radial-gradient(circle at top left, #f8f9fa, #ffffff);
+/* ===================================
+   TYPOGRAPHY SYSTEM
+=================================== */
+
+.section-title {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  color: var(--heading-color);
+  letter-spacing: -0.02em;
 }
 
-/* Basic animation utilities */
+.section-subtitle {
+  font-size: var(--fs-body);
+  color: var(--color-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.display-title {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  color: var(--heading-color);
+}
+
+/* ===================================
+   SECTION SYSTEM
+=================================== */
+
+.section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* ===================================
+   ANIMATION UTILITIES
+=================================== */
+
 .fade-in {
   opacity: 0;
   transform: translateY(12px);
@@ -48,10 +116,11 @@ main {
   transform: translateY(0);
 }
 
-/* ===============================
+/* ===================================
    MODERN BUTTON SYSTEM
-================================ */
+=================================== */
 
+/* Base */
 .btn,
 .premium-button {
   border-radius: var(--radius-md);
@@ -59,13 +128,85 @@ main {
   transition: all 0.3s ease;
 }
 
-/* Hover modern effect */
+/* Hover Lift */
 .btn:hover,
 .premium-button:hover {
   transform: translateY(-2px);
 }
 
-/* Form inputs consistency */
+/* Custom Primary */
+.btn-primary-custom {
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-primary-custom:hover {
+  background: #162a48;
+}
+
+/* Accent Button */
+.btn-accent-custom {
+  background: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-accent-custom:hover {
+  background: #b02a37;
+}
+
+/* Soft Outline */
+.btn-soft-outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.7rem 1.8rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-soft-outline:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* ===================================
+   FORM SYSTEM
+=================================== */
+
 .form-control {
   border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  transition: 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(28, 54, 93, 0.15);
+}
+
+/* ===================================
+   UTILITY CARDS
+=================================== */
+
+.card-soft {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: none;
+  background: #ffffff;
+}
+
+/* ===================================
+   PLACEHOLDERS
+=================================== */
+
+.hero-placeholder,
+.about-placeholder {
+  min-height: 260px;
+  padding: 1.5rem;
+  background: radial-gradient(circle at top left, #f8f9fa, #ffffff);
 }

@@ -1,63 +1,44 @@
-/* ===================================
-   Why Section - Feature Grid
-=================================== */
-
 .why-section {
+  padding: 7rem 0;
+  background: #f9fafb;
+}
+
+.why-card {
   position: relative;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background: #ffffff;
-}
-
-/* Üst ince accent çizgi */
-.why-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: #dc3545; /* marka kırmızı */
-  border-radius: 2px;
-}
-
-/* Why item kart görünümü */
-.why-item {
-  padding: 2rem;
-  border-radius: 1.25rem;
-  background: #f8f9fa;
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background-color 0.25s ease;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  background: #fff;
   height: 100%;
+  transition: all 0.3s ease;
 }
 
-/* Hover efekti */
-.why-item:hover {
+.why-card:hover {
   transform: translateY(-6px);
   background: #ffffff;
-  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.06);
 }
 
-/* Başlık */
-.why-item h3 {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+.why-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(220, 38, 38, 0.08);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
 }
 
-/* Metin */
-.why-item p {
+.why-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.why-card p {
   font-size: 0.95rem;
+  color: #6b7280;
   line-height: 1.6;
-  color: #6c757d;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .why-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
+  position: relative;
+  z-index: 2;
 }
