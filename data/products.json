@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "title": "23 Nisan Özel Papyon – Kırmızı Beyaz",
-    "description": "Milli bayram konseptine uygun, yüksek kaliteli kumaş ile üretilmiş toptan papyon modeli.",
-    "image": "assets/images/products/product-1.png"
+    "title": "23 Nisan ve 29 Ekim Törenlerine Özel Kuyruklu Ay Yıldız Fiyonk Toka",
+    "description": "23 Nisan ve 29 Ekim gösteri gruplarının vazgeçilmezi! Ay yıldız desenli, uzun kuyruklu fiyonk toka ile sınıfınızın şıklığını tamamlayın.",
+    "image": "assets/images/products/modelT002.png"
   },
   {
     "id": 2,
-    "title": "Okul Logolu Papyon",
-    "description": "Okulunuza özel logo baskılı kurumsal tasarım seçenekleri.",
-    "image": "assets/images/products/product-2.png"
+    "title": "23 Nisan ve 29 Ekim Okul Gösterileri İçin Atatürk Baskılı Kırmızı Saten Papyon (Lastikli)",
+    "description": "Okul gösterileri ve bayram törenleri için özel olarak tasarlanan bu şık saten papyon, arkası lastikli yapısı sayesinde saniyeler içinde kolayca takılır. Ayarlanabilir esnek lastiği her yaş grubuna tam uyum sağlar.",
+    "image": "assets/images/products/modelP01.png"
   },
   {
     "id": 3,
-    "title": "23 Nisan Özel Toka",
-    "description": "Kırmızı beyaz konseptli, kız öğrenciler için özel üretim toka modeli.",
-    "image": "assets/images/products/product-3.png"
+    "title": "23 Nisan ve 29 Ekim Okul Gösterileri İçin Ay Yılzdız Baskılı Kırmızı Saten Papyon (Lastikli)",
+    "description": "Okul gösterileri ve bayram törenleri için özel olarak tasarlanan bu şık saten papyon, arkası lastikli yapısı sayesinde saniyeler içinde kolayca takılır. Ayarlanabilir esnek lastiği her yaş grubuna tam uyum sağlar. ",
+    "image": "assets/images/products/modelP02.png"
   },
   {
     "id": 4,
-    "title": "Çocuk Serisi Papyon",
-    "description": "Renkli ve eğlenceli tasarım seçenekleri ile özel koleksiyon.",
-    "image": "assets/images/products/product-4.png"
+    "title": "23 Nisan ve 29 Ekim Okul Gösterilerine Özel Taç – Sınıf Seti",
+    "description": "Okul törenleri ve çocuk bayramı gösterileri için özel tasarım! Atatürk desenli kırmızı taç, esnek yapısı sayesinde çocukların başını sıkmaz ve tüm gün konforlu kullanım sunar. ",
+    "image": "assets/images/products/modelTA01.png"
   },
   {
     "id": 5,
-    "title": "Premium Saten Papyon",
-    "description": "Yüksek kalite saten kumaş ile üretilmiş özel seri.",
-    "image": "assets/images/products/product-5.png"
+    "title": "23 Nisan ve 29 Ekim Okul Gösterilerine Özel Kuyruklu Kırmızı Beyaz Bileklik (Sınıf Seti)",
+    "description": "Okul gösterileri ve bayram törenleri için tasarlanan bu gösteri bilekliği, esnek lastikli yapısı sayesinde çocukların bileğini sıkmaz. Hareketli dans koreografilerinde çocukların el hareketlerine estetik bir hava katan uzun kuyruk detaylarıyla hazırlanmıştır.",
+    "image": "assets/images/products/modelB01.png"
   },
   {
     "id": 6,
-    "title": "Kurumsal Toptan Set",
-    "description": "Okullar için toplu üretim avantajlı set modeli.",
-    "image": "assets/images/products/product-2.png"
+    "title": "23 Nisan Çocuk Bayramına Özel Tasarım Fiyonk Toka (Lastikli)",
+    "description": "23 Nisan gösteri gruplarının vazgeçilmezi! Bayrak ve çocuk desenli , kuyruklu fiyonk toka ile sınıfınızın şıklığını tamamlayın.",
+    "image": "assets/images/products/modelT003.png"
   }
 ]

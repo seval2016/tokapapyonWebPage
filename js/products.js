@@ -28,34 +28,35 @@ async function loadProducts(grid) {
       col.className = "col-lg-4 col-md-6";
 
       col.innerHTML = `
-  <article class="premium-card">
+        <article class="premium-card product-card">
 
-    <div class="premium-image-area">
-      <img src="${product.image}" 
-           alt="${product.title}" 
-           class="premium-image">
-    </div>
+          <div class="premium-image-area">
+            <img src="${product.image}" 
+                 alt="${product.title}" 
+                 class="premium-image">
+          </div>
 
-    <div class="premium-body">
+          <div class="premium-body">
 
-      <h3 class="premium-title">
-        ${product.title}
-      </h3>
+            <h3 class="premium-title product-title">
+              ${product.title}
+            </h3>
 
-      <p class="premium-subtitle">
-        ${product.description}
-      </p>
+            <p class="premium-subtitle">
+              ${product.description}
+            </p>
 
-      <div class="premium-cta">
-        <a href="#contact" class="premium-button btn btn-danger px-4 py-2 btn-lg">
-          Teklif Al
-        </a>
-      </div>
+            <div class="premium-cta">
+              <a href="#" 
+                 class="premium-button btn btn-danger px-4 py-2 btn-lg js-whatsapp">
+                Teklif Al
+              </a>
+            </div>
 
-    </div>
+          </div>
 
-  </article>
-`;
+        </article>
+      `;
 
       grid.appendChild(col);
     });

@@ -83,13 +83,16 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+ .footer {
+    background-size: contain;
+    background-position: bottom center;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: #f5e9df; /* boşluk kalırsa uyumlu zemin */
+  }
+
   .footer-container {
     flex-direction: column;
     gap: 40px;
-  }
-
-  .footer {
-    background-size: contain;
-    background-position: bottom center;
   }
 }
