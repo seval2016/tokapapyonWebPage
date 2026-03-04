@@ -1,43 +1,123 @@
-/* Navbar specific styles */
+/* ================================
+   FIXED HEADER STRUCTURE
+================================ */
 
-.navbar {
-  position: sticky;
+.site-header {
+  position: fixed;
   top: 0;
-  z-index: 1030;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+/* ================================
+   TOPBAR
+================================ */
+
+.topbar {
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: var(--fs-small);
+  padding: 0.45rem 0;
+}
+
+.top-contact {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+.top-contact:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.premium-navbar {
   transition: all 0.3s ease;
-  background-color: transparent;
+  background: transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.navbar-brand {
-  letter-spacing: 0.06em;
-}
-
+/* Logo */
 .navbar-brand-logo {
-  height: 50px;
-  width: auto;
-  display: block;
+  height: 55px;
+  transition: 0.3s ease;
 }
 
+/* Nav links */
 .nav-link {
   font-weight: 500;
+  color: var(--color-primary);
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #0d6efd;
+/* Underline animasyonu */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-accent);
+  transition: 0.3s ease;
+  transform: translateX(-50%);
 }
 
-.nav-link.active {
-  color: #0d6efd;
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 60%;
 }
+
+/* CTA */
+.navbar-cta {
+  padding: 0.6rem 1.6rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+/* ================================
+   SCROLL EFFECT
+================================ */
 
 .navbar-scrolled {
-   background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0.25rem 0.75rem rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-soft);
 }
 
 .navbar-shrink {
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+}
+
+.navbar-shrink .navbar-brand-logo {
+  height: 45px;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 991px) {
+
+  body {
+    padding-top: 110px;
+  }
+
+  .topbar-right {
+    display: none !important;
+  }
+
 }

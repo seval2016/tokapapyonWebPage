@@ -2,25 +2,33 @@
   {
     "image": "assets/images/hero/slider-1.png",
     "eyebrow": "TOKAPAPYON TOPTAN ÜRETİM",
-    "title": "23 Nisan’a Özel Okullara Toptan Papyon & Toka",
-    "subtitle": "Kurumsal kimliğinize uygun toplu üretim çözümleri.",
-    "primaryButtonText": "Teklif Al",
-    "primaryButtonLink": "#contact"
+    "title": "23 Nisan Etkinlikleri İçin Profesyonel Aksesuar Çözümleri",
+    "subtitle": "Okul gösterilerinde görsel bütünlük sağlayan, yüksek kaliteli ve bayram konseptine uygun tasarım setleriyle sahne şıklığını tamamlıyoruz.",
+    "primaryButtonText": "Koleksiyonu İncele",
+    "primaryButtonLink": "#collection"
   },
   {
     "image": "assets/images/hero/slider-2.png",
     "eyebrow": "ZAMANINDA TESLİMAT",
-    "title": "Hızlı Üretim ve Güvenli Sevkiyat",
-    "subtitle": "Yüksek adetli siparişlerde planlı üretim.",
-    "primaryButtonText": "WhatsApp ile Yaz",
-    "primaryButtonLink": "#contact"
+    "title": "El Emeği Ay-Yıldızlı ve Atatürk Temalı Kurumsal Koleksiyonlar",
+    "subtitle": "Kadın üreticilerimizin usta işçiliğiyle hazırlanan tokalar, gösteri bileklikleri ve papyonlarla; kurum kimliğinizi bayram ruhuyla birleştirin.",
+    "primaryButtonText": "Konsept Modelleri Gör",
+    "primaryButtonLink": "#portfolio"
   },
   {
     "image": "assets/images/hero/slider-3.png",
     "eyebrow": "KURUMSAL TASARIM",
-    "title": "Okulunuza Özel Tasarım Seçenekleri",
-    "subtitle": "Renk, logo ve konsept uyumlu üretim.",
-    "primaryButtonText": "Koleksiyonu İncele",
-    "primaryButtonLink": "#collection"
+    "title": "Kadın Emeği Destekli ve Yüksek Kapasiteli Mikro-Üretim Ağı",
+    "subtitle": "Halk Eğitim Merkezleri bünyesindeki geniş ağımızla kadın istihdamına katkı sağlıyor; binlerce adetlik kurumsal siparişlerinizi titiz el işçiliği ve merkezi koordinasyonla karşılıyoruz.",
+    "primaryButtonText": "Üretim Modelimiz",
+    "primaryButtonLink": "#about"
+  },
+  {
+    "image": "assets/images/hero/slider-4.png",
+    "eyebrow": "KURUMSAL TASARIM",
+    "title": "Termin Garantili Sevkiyat ve Resmi Faturalı Satış Süreci",
+    "subtitle": "2026 tören takviminize tam uyum sağlıyor; tüm kurumsal siparişlerinizi resmi mevzuata uygun faturalandırma ve 23 Nisan teslimat garantisiyle sevk ediyoruz.",
+    "primaryButtonText": "Hızlı Teklif Alın",
+    "primaryButtonLink": "#contact"
   }
 ]

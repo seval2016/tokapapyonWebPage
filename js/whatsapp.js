@@ -5,7 +5,7 @@ document.addEventListener("click", function (e) {
 
   e.preventDefault();
 
-const phoneNumber = "5528178989";
+const phoneNumber = "5544866582";
 
   const productCard = button.closest(".product-card");
 

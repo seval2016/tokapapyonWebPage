@@ -5,7 +5,6 @@ document.addEventListener("sections:loaded", async () => {
   const inner = slider.querySelector(".carousel-inner");
   const indicators = slider.querySelector(".carousel-indicators");
 
-  // Temizle (güvenlik için)
   inner.innerHTML = "";
   indicators.innerHTML = "";
 
@@ -14,7 +13,6 @@ document.addEventListener("sections:loaded", async () => {
     const slides = await response.json();
 
     slides.forEach((slide, index) => {
-      // Slide
       const slideDiv = document.createElement("div");
       slideDiv.className = `carousel-item ${index === 0 ? "active" : ""}`;
 
@@ -25,18 +23,33 @@ document.addEventListener("sections:loaded", async () => {
 
           <div class="container hero-content">
             <div class="hero-copy">
-              <p class="hero-eyebrow">${slide.eyebrow}</p>
-              <h2 class="hero-title">${slide.title}</h2>
-              <p class="hero-subtitle">${slide.subtitle}</p>
-           <div class="hero-buttons">
-  <a href="#collection" class="btn btn-danger px-4 py-2 btn-lg fs-6 fw-normal">
-    Koleksiyonu İncele
-  </a>
 
-  <a href="#about" class="btn btn-outline-light btn-lg px-4 fs-6 fw-normal">
-    Üretim Sürecimiz
-  </a>
-</div>
+              <p class="hero-eyebrow">${slide.eyebrow}</p>
+
+              <h2 class="hero-title">
+                ${slide.title}
+              </h2>
+
+              <p class="hero-subtitle">
+                ${slide.subtitle}
+              </p>
+
+              <div class="hero-buttons">
+
+                ${
+                  slide.primaryButtonText
+                    ? `<a href="${slide.primaryButtonLink}" 
+                         class="btn btn-danger px-4 py-2 btn-lg fs-6 fw-normal">
+                        ${slide.primaryButtonText}
+                      </a>`
+                    : ""
+                }
+
+             <a href="#about" 
+                         class="btn btn-outline-light btn-lg px-4 fs-6 fw-normal">
+                           Üretim Modelimiz
+                      </a>
+              </div>
             </div>
           </div>
         </div>
@@ -44,17 +57,16 @@ document.addEventListener("sections:loaded", async () => {
 
       inner.appendChild(slideDiv);
 
-      // Indicator
       const button = document.createElement("button");
       button.type = "button";
       button.setAttribute("data-bs-target", "#heroSlider");
       button.setAttribute("data-bs-slide-to", index);
+
       if (index === 0) button.classList.add("active");
 
       indicators.appendChild(button);
     });
 
-    // Carousel başlat
     bootstrap.Carousel.getOrCreateInstance(slider, {
       interval: 5000,
       pause: false,

@@ -1,41 +1,51 @@
 /* ===================================
-   TOKAPAPYON DESIGN SYSTEM
-   Global Layout + Theme Tokens
+   TOKAPAPYON GLOBAL DESIGN SYSTEM
+   23 Nisan + Marka Uyumlu
 =================================== */
 
 :root {
 
   /* ========= BRAND COLORS ========= */
-  --color-primary: #1C365D;      /* Navy */
-  --color-accent: #dc3545;       /* Kırmızı */
-  --color-soft-bg: #f8f6f3;      /* Pastel zemin */
-  --color-dark: #212529;
-  --color-muted: #6c757d;
+
+  --color-primary: #1C365D;     /* Logo Navy */
+  --color-red-base: #E30A17;    /* Bayrak kırmızısı */
+  --color-accent: #C62828;      /* Yumuşatılmış kırmızı */
+
+  --color-soft-bg: #FBF6F2;     /* Sıcak pastel zemin */
+  --color-white: #FFFFFF;
+
+  --color-dark: #1F2937;
+  --color-muted: #7A6F66;
 
   /* ========= TEXT ========= */
+
   --heading-color: var(--color-primary);
-  --body-color: #4a4a4a;
+  --body-color: #4B4B4B;
 
   /* ========= FONT SCALE ========= */
-  --fs-display: clamp(2.4rem, 3vw, 3rem);
-  --fs-h1: 2.1rem;
-  --fs-h2: 1.7rem;
+
+  --fs-display: clamp(2.6rem, 3vw, 3.2rem);
+  --fs-h1: 2.2rem;
+  --fs-h2: 1.8rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
   --fs-small: 0.9rem;
 
-  /* ========= BORDER RADIUS ========= */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-xl: 28px;
+  /* ========= RADIUS ========= */
 
-  /* ========= SHADOWS ========= */
-  --shadow-soft: 0 8px 30px rgba(0,0,0,0.05);
-  --shadow-medium: 0 15px 45px rgba(0,0,0,0.08);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* ========= SHADOW ========= */
+
+  --shadow-soft: 0 10px 35px rgba(28, 54, 93, 0.06);
+  --shadow-medium: 0 18px 50px rgba(28, 54, 93, 0.08);
 
   /* ========= SPACING ========= */
-  --section-padding: 6rem;
+
+  --section-padding: 6.5rem;
 }
 
 /* ===================================
@@ -49,15 +59,16 @@ html {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--body-color);
-  background-color: #ffffff;
+  background-color: var(--color-white);
   line-height: 1.6;
+  padding-top: 120px; /* fixed header offset */
 }
 
 main {
   display: block;
 }
 
-/* Navbar offset */
+/* Navbar scroll offset */
 .hero,
 .collection-section,
 .about-section,
@@ -65,7 +76,7 @@ main {
 .why-section,
 .contact-section,
 .footer-section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 /* ===================================
@@ -101,26 +112,19 @@ main {
   padding-bottom: var(--section-padding);
 }
 
-/* ===================================
-   ANIMATION UTILITIES
-=================================== */
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+/* Alternating premium background */
+.bg-soft {
+  background: var(--color-soft-bg);
 }
 
-.fade-in.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.bg-white {
+  background: var(--color-white);
 }
 
 /* ===================================
-   MODERN BUTTON SYSTEM
+   BUTTON SYSTEM
 =================================== */
 
-/* Base */
 .btn,
 .premium-button {
   border-radius: var(--radius-md);
@@ -128,36 +132,38 @@ main {
   transition: all 0.3s ease;
 }
 
-/* Hover Lift */
+/* Hover lift */
 .btn:hover,
 .premium-button:hover {
   transform: translateY(-2px);
 }
 
-/* Custom Primary */
+/* Primary (Navy) */
 .btn-primary-custom {
   background: var(--color-primary);
   color: #ffffff;
   border: none;
   padding: 0.75rem 2rem;
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
 }
 
 .btn-primary-custom:hover {
   background: #162a48;
 }
 
-/* Accent Button */
+/* Accent (Red) */
 .btn-accent-custom {
   background: var(--color-accent);
   color: #ffffff;
   border: none;
   padding: 0.75rem 2rem;
   border-radius: var(--radius-md);
+  box-shadow: 0 8px 25px rgba(198, 40, 40, 0.25);
 }
 
 .btn-accent-custom:hover {
-  background: #b02a37;
+  background: #a82020;
 }
 
 /* Soft Outline */
@@ -190,23 +196,33 @@ main {
 }
 
 /* ===================================
-   UTILITY CARDS
+   CARD SYSTEM
 =================================== */
 
 .card-soft {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   border: none;
-  background: #ffffff;
+  background: var(--color-white);
+  transition: 0.3s ease;
+}
+
+.card-soft:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-4px);
 }
 
 /* ===================================
-   PLACEHOLDERS
+   ANIMATION UTILITIES
 =================================== */
 
-.hero-placeholder,
-.about-placeholder {
-  min-height: 260px;
-  padding: 1.5rem;
-  background: radial-gradient(circle at top left, #f8f9fa, #ffffff);
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

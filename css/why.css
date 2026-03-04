@@ -1,44 +1,60 @@
+/* ===============================
+   WHY SECTION
+   System Aligned Version
+================================ */
+
 .why-section {
-  padding: 7rem 0;
-  background: #f9fafb;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: var(--color-soft-bg);
 }
+
+/* Kart */
 
 .why-card {
   position: relative;
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  background: #fff;
+  padding: 2.8rem 2.2rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
   height: 100%;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
+  box-shadow: var(--shadow-soft);
 }
 
 .why-card:hover {
   transform: translateY(-6px);
-  background: #ffffff;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-medium);
 }
 
+/* Büyük arka plan numarası */
+
 .why-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgba(220, 38, 38, 0.08);
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: rgba(198, 40, 40, 0.08); /* accent red soft */
   position: absolute;
   top: 1rem;
   right: 1.5rem;
+  pointer-events: none;
 }
+
+/* Başlık */
 
 .why-card h3 {
-  font-size: 1.1rem;
+  font-size: var(--fs-h3);
   font-weight: 700;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
   position: relative;
   z-index: 2;
+  color: var(--heading-color);
 }
 
+/* Açıklama */
+
 .why-card p {
-  font-size: 0.95rem;
-  color: #6b7280;
-  line-height: 1.6;
+  font-size: var(--fs-body);
+  color: var(--color-muted);
+  line-height: 1.7;
   position: relative;
   z-index: 2;
 }
